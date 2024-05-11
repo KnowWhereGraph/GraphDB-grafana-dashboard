@@ -15,10 +15,10 @@
       }
     ]
   },
-  "description": "Grafana dashboard for monitoring GraphDB. Connects to Prometheus that scrapes GraphDB.",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 2,
   "links": [],
   "panels": [
     {
@@ -118,7 +118,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_cache_hit{instance=\"graphdb:7200\", job=\"GraphDB Data Structures Metrics\"}",
+          "expr": "graphdb_cache_hit{instance=${instance}, job=\"GraphDB Data Structures Metrics\"}",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -214,7 +214,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_cache_miss{instance=\"graphdb:7200\", job=\"GraphDB Data Structures Metrics\"}",
+          "expr": "graphdb_cache_miss{instance=${instance}, job=\"GraphDB Data Structures Metrics\"}",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -322,7 +322,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_class_count{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}",
+          "expr": "graphdb_class_count{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -418,7 +418,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_heap_max_mem{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e6",
+          "expr": "graphdb_heap_max_mem{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e6",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -514,7 +514,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_heap_used_mem{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e6",
+          "expr": "graphdb_heap_used_mem{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e6",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -610,7 +610,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_nonheap_committed_mem{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e6",
+          "expr": "graphdb_nonheap_committed_mem{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e6",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -668,8 +668,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -706,7 +705,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_heap_committed_mem{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e6",
+          "expr": "graphdb_heap_committed_mem{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e6",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -801,7 +800,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_nonheap_used_mem{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e6",
+          "expr": "graphdb_nonheap_used_mem{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e6",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -907,7 +906,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_cpu_load{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}",
+          "expr": "graphdb_cpu_load{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1002,7 +1001,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_open_file_descriptors{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}",
+          "expr": "graphdb_open_file_descriptors{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1110,7 +1109,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_logs_dir_free{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e9\n",
+          "expr": "graphdb_logs_dir_free{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e9\n",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1205,7 +1204,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_logs_dir_used{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e9",
+          "expr": "graphdb_logs_dir_used{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e9",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1300,7 +1299,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_data_dir_used{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e+9",
+          "expr": "graphdb_data_dir_used{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e+9",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1395,7 +1394,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_data_dir_free{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e+6",
+          "expr": "graphdb_data_dir_free{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e+6",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1490,7 +1489,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_work_dir_free{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e+9",
+          "expr": "graphdb_work_dir_free{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e+9",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1585,7 +1584,7 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
-          "expr": "graphdb_work_dir_used{instance=\"graphdb:7200\", job=\"GraphDB Infrastructure Metrics\"}/1e+9",
+          "expr": "graphdb_work_dir_used{instance=${instance}, job=\"GraphDB Infrastructure Metrics\"}/1e+9",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1598,20 +1597,40 @@
   ],
   "refresh": "",
   "schemaVersion": 39,
-  "tags": [
-    "GraphDB"
-  ],
+  "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "\"graphdb:7200\"",
+          "value": "\"graphdb:7200\""
+        },
+        "description": "The instance name that matches the Prometheus logs",
+        "hide": 0,
+        "label": "",
+        "name": "instance",
+        "options": [
+          {
+            "selected": true,
+            "text": "\"graphdb:7200\"",
+            "value": "\"graphdb:7200\""
+          }
+        ],
+        "query": "\"graphdb:7200\"",
+        "skipUrlSync": false,
+        "type": "textbox"
+      }
+    ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "GraphDB",
   "uid": "ddk52tapyhvk0b",
-  "version": 10,
+  "version": 2,
   "weekStart": ""
 }
